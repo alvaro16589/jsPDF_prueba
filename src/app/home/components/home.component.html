@@ -1,0 +1,46 @@
+<div>
+    <div class="container text-center ">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8" id="docu">
+                <img src="assets/img/img.png" class="img-fluid" alt="...">
+                <table class="table caption-top" >
+                    
+                    <caption>
+                        <h1>
+                            <strong>
+                                List of users
+                            </strong>
+                        </h1>
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th scope="N°">N°</th>
+                            <th scope="Name">Name</th>
+                            <th scope="Last name">Last name</th>
+                            <th scope="Sex">Sex</th>
+                            <th scope="Born">Born</th>
+                            <th scope="C.I.">C.I.</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let cus of customersA">
+                            <td>{{ cus.id }}</td>
+                            <td>{{ cus.name }}</td>
+                            <td>{{ cus.lastName }}</td>
+                            <td>{{ cus.sex }}</td>
+                            <td>{{ cus.born | date }}</td>
+                            <td>{{ cus.ci }}</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+
+
+
+</div>
+<button type="button" class="btn btn-success" (click)="pdf()">Imprimir</button>
